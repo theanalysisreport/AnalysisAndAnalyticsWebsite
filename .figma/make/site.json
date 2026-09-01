@@ -1,0 +1,10 @@
+{
+  "description": "This platform delivers in-depth data analysis and insights for businesses, helping users make informed decisions by transforming raw data into meaningful reports.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

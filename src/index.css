@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-fraunces: 'Fraunces', serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+
+  --color-tar-bg: #06101E;
+  --color-tar-surface: #0D1A2D;
+  --color-tar-panel: #111F34;
+  --color-tar-border: #1A2D45;
+  --color-tar-teal: #3D8A8F;
+  --color-tar-bright: #4AABAF;
+  --color-tar-text: #DCE8F2;
+  --color-tar-muted: #6B85A0;
+  --color-tar-silver: #8BA5C0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #06101E;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a2d45 transparent;
+}
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #1a2d45;
+  border-radius: 2px;
+}
+
+@keyframes ticker-anim {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-wrap {
+  overflow: hidden;
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-anim 50s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
